@@ -6,17 +6,17 @@ pipeline {
                 sh 'python --version'
             }
         }
-    stages {
         stage('Test') {
             steps {
                 sh 'python dev.py'
             }
         }
-    stages {
         stage('Promote') {
             steps {
                 sh 'python --version'
             }
-        }      
+        }   
     }
 }
+
+
