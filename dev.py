@@ -1,6 +1,6 @@
 # Test dev
 
-print ("test")
+print ("This is jenkins build test")
 # adding some changes
 
 # adding some features here
