@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python dev.py'
+                sh 'python webapp/unit.py'
             }
         }
         stage('Promote') {
