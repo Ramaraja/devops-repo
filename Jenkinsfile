@@ -6,6 +6,11 @@ pipeline {
                 sh 'python --version'
             }
         }
+        stage('Install pre-reqs') {
+            steps {
+                sh 'pip install requests'
+            }
+        }
         stage('Test') {
             steps {
                 sh 'python webapp/unit.py'
