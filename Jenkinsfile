@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install pre-reqs') {
             steps {
-                sh 'pip install requests'
+                sh 'python -m pip install requests'
             }
         }
         stage('Test') {
@@ -23,5 +23,3 @@ pipeline {
         }   
     }
 }
-
-
