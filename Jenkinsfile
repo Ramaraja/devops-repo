@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install pre-reqs') {
             steps {
-                sh 'sudo python -m pip install requests'
+                sh 'python -m pip install requests'
             }
         }
         stage('Test') {
