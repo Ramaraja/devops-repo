@@ -1,0 +1,18 @@
+# image building
+docker build -t webapp . 
+
+# list container images
+docker images
+
+# list containers
+docker ps
+docker ps -a
+
+# create container
+docker run -d --name webapp <imagename> -p 8000:8000
+
+# remove container
+docker rm <containerid/name>
+
+# check container logs
+docker logs <containerid>
