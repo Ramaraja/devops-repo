@@ -1,0 +1,14 @@
+1. Docker installation
+2. Create a simple container with Centos image: https://hub.docker.com/_/centos
+3. Docker commands lab : docker start,stop,images,run,rm
+4. Create custom image - 
+		* Create Dockerfile - use python image
+		* copy webapp to container image
+		* build image - docker build -t <imagename> .
+		* use the image to create container - docker run -d --name <containername> <image> [optional]
+
+		* expose port: [ -p <hostport>:<continerport> ]
+		* volume mount [ -v <hostpath>:<containerpath> ]
+
+
+
