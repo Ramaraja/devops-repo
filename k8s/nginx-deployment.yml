@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: nginx-deployment
+spec:
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        demo: k8s-handson
+        role: presetdemo
+    spec:
+      containers:
+      - name: nginx-server
+        image: nginx
+        imagePullPolicy: IfNotPresent
+  replicas: 3
+  selector:
+    matchLabels:
+      demo: k8s-handson
