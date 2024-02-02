@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: webapp-deployment
+spec:
+  template:
+    metadata:
+      name: webapp-pod
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - name: webapp-server
+        image: registry.hub.docker.com/ramaraja/webapp
+        imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: regcred
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp
