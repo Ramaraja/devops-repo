@@ -8,12 +8,20 @@ pipeline {
         }
         stage('Install pre-reqs') {
             steps {
-                sh 'python -m pip install requests'
+                // sh 'python -m pip install requests'
+                sh """
+                python3 -m venv env
+                source ./env/bin/activate 
+                python -m pip install requests
+                """
             }
         }
         stage('Test') {
             steps {
-                sh 'python webapp/unit.py'
+                sh """
+                source ./env/bin/activate 
+                python webapp/unit.py
+                """
             }
         }
         stage('Promote') {
